@@ -45,3 +45,9 @@ if [[ -e "$ANTIGEN_HOME/antigen.zsh" ]]; then
 
     antigen apply
 fi
+
+# Work
+if [[ -e "$HOME/.zshrc_work" ]]; then
+    [[ "$XTRACE" == "verbose" ]] && printf "\nRunning source $HOME/.zshrc_work ..."
+    source "$HOME/.zshrc_work"
+fi
