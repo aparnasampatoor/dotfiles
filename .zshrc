@@ -46,6 +46,12 @@ if [[ -e "$ANTIGEN_HOME/antigen.zsh" ]]; then
     antigen apply
 fi
 
+# https://github.com/junegunn/fzf
+if [[ -d "$HOME/lib/fzf" ]]; then
+    source "$HOME/lib/fzf/shell/completion.zsh"
+    source "$HOME/lib/fzf/shell/key-bindings.zsh"
+fi
+
 # Work
 if [[ -e "$HOME/.zshrc_work" ]]; then
     [[ "$XTRACE" == "verbose" ]] && printf "\nRunning source $HOME/.zshrc_work ..."
